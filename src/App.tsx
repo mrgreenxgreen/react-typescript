@@ -9,6 +9,45 @@ function App() {
 
 
 
+    window.onload = function() {
+        // Get the element where you want to display the counting number
+        const numberElement = document.getElementById("number-to-count");
+
+        // Get the real value of the number
+        const realValue = parseFloat(numberElement.textContent); // Assuming the real value is initially stored as text content
+
+        // Start counting from 0 to the real value
+        let currentValue = 0;
+        const intervalId = setInterval(() => {
+            currentValue += 1;
+            numberElement.textContent = currentValue.toFixed(2); // Update the displayed value with 2 decimal places
+
+            if (currentValue >= realValue) {
+                clearInterval(intervalId); // Stop counting when the real value is reached
+            }
+        }, 50); // Update every 50 milliseconds (adjust as needed)
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,7 +108,7 @@ function App() {
           </p>
           <h1 id="display-number">Number: {x}</h1>
 
-          <NumberCountup realValue={100} />
+          <NumberCountup realValue={5} />
 
 
       </>
