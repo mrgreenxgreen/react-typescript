@@ -1,4 +1,5 @@
-
+import {Link} from "react-router-dom";
+import Header from "./Division/Header.tsx";
 
 function App() {
   console.log("working");
@@ -6,8 +7,7 @@ function App() {
 
   return (
       <>
-    <h1>yes</h1>
-
+   <Header/>
       </>
   )
         }
