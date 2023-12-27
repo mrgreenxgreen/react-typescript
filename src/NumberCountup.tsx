@@ -16,14 +16,22 @@ class NumberCountup extends Component<NumberCountupProps> {
             // Use tolerance and check realValue for precision and changes:
             if (Math.abs(this.currentValue - this.props.realValue) < 0.01 || this.currentValue >= this.props.realValue) {
                 clearInterval(this.intervalId);
+                alert("time'is up")
             }
 
             this.forceUpdate(); // Trigger re-render
-        }, 1000);
+        }, 5);
+
     }
 
     componentWillUnmount() {
-        clearInterval(this.intervalId);
+
+
+            clearInterval(this.intervalId)
+
+
+
+
     }
 
     render() {
