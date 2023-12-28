@@ -3,18 +3,25 @@ import {
     createBrowserRouter,
 
 } from "react-router-dom";
-import App from "./App.tsx";
-import About from "./Pages/About.tsx"
-import Contacts from "./Pages/Contacts.tsx";
+import Home from "./Pages/Home/Home.tsx";
+import Product from "./Pages/Product/Product.tsx"
+import Contacts from "./Pages/Contacts/Contacts.tsx";
+import Item from "./Components/Item.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <Home/>,
     },
     {
-        path: "/about",
-        element:<About/>
+        path: "/products",
+        element:<Product/>,
+        children:[
+            {
+                path: ":id",
+                element:<Item/>
+            },
+        ]
     },
     {
         path: "/contacts",

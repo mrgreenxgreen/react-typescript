@@ -1,0 +1,25 @@
+
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100vw;
+    background-color:lightseagreen;
+    padding:15px;
+    font-family: "Times New Roman", serif;
+    font-size:20px;
+    div{
+        color:white;
+    }
+    .menu{
+        display:flex;
+        gap:20px;
+        div{
+            color:white;
+        }
+
+    }
+}
+
+

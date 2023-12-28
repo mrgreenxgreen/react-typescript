@@ -1,4 +1,4 @@
-import Header from "../Division/Header.tsx"
+import Header from "../../Division/Header/Header.tsx"
 
 export default function Contacts(){
 

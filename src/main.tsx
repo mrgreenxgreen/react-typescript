@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+import "./global.css"
 import {
     RouterProvider,
 } from "react-router-dom";
