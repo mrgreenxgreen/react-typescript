@@ -1,19 +1,28 @@
 import Head from "./Header.module.scss"
 import React from "react";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import "./Header.css"
 
 
 export default function Header():React.ReactElement{
 
-    return(
+
+
+    return (
         <>
             <div className={Head.header}>
-                <Link to={"/"}>
+                <NavLink to={"/"}>
                     <div>Brand Name</div>
-                </Link>
+                </NavLink>
                 <div className={Head.menu}>
-                    <Link to={"/products"}><div> Products</div></Link>
-                    <Link to={"/contacts"}><div> Contacts </div></Link>
+                    <NavLink to={"/products"}
+                             className={({ isActive }: { isActive: boolean }) => (isActive ? "activegig" : "") as string}
+                        // className={Head.active}
+                             >
+
+                        <div> Products</div>
+                    </NavLink>
+                    <NavLink to={"/contacts"}><div> Contacts </div></NavLink>
                 </div>
             </div>
 
